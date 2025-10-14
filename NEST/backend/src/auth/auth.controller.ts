@@ -10,6 +10,7 @@ import { UsersService } from "src/users/users.service";
 export class AuthController {
   constructor(private authService: AuthService) {}
 
+  //Controlador para la ruta de registro de usuario 
   @Post("register")
   register(@Body() user: RegisterAuthDto) {
     return this.authService.register(user);
